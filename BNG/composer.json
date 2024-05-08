@@ -1,0 +1,28 @@
+{
+    "name": "sys4soft/bng",
+    "description": "Aplicacao para gestao de name gathering.",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Joao Ribeiro",
+            "email": "joaoribeiro@gmail.com"
+        }
+    ],
+    "require": {
+        "monolog/monolog": "^3.2",
+        "phpoffice/phpspreadsheet": "^1.26",
+        "mpdf/mpdf": "^8.1",
+        "phpmailer/phpmailer": "^6.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "bng\\Controllers\\":["app/controllers"],
+            "bng\\Models\\":["app/models"],
+            "bng\\System\\":["app/system"]
+        },
+        "files":[
+            "app/config.php",
+            "app/helpers/functions.php"
+        ]
+    }
+}
