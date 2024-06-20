@@ -4,8 +4,7 @@
 
 $rotas = [
     'inicio' => 'main@index',
-    'loja' => 'main@loja',
-    'carrinho' => 'loja@carrinho'
+    'loja' => 'main@loja'
 ];
 
 // Definindo uma ação por defeito
@@ -27,8 +26,7 @@ $partes = explode('@', $rotas[$acao]);
 
 $controlador = ucfirst($partes[0]);
 $controlador = 'App\\Classes\\Controllers\\'.$controlador;
-$metodo = ucfirst($partes[1]);
+$metodo = $partes[1];
 
 $ctr = new $controlador();
-
 $ctr->$metodo();

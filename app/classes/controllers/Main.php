@@ -2,12 +2,24 @@
 
 namespace App\Classes\Controllers;
 
-class Main 
+use App\Classes\Helpers\Functions;
+
+class Main
 {
     //====================================================================================================
     public function index()
-    {
-        echo 'Main!!!!!!!!!!';
+    {;
+
+        $dados = [
+            'titulo' => 'Este é um título',
+            'clientes' => ['Marco', 'Vitoria', 'Ana']
+        ];
+
+        return Functions::layout([
+            'layouts/html_header',
+            'home',
+            'layouts/html_footer',
+        ], $dados);
     }
 
     //====================================================================================================
