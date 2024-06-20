@@ -12,3 +12,8 @@ require_once('../config.php');
 
 // Carregando todas as classes do projeto
 require_once('../vendor/autoload.php');
+
+// Carregando sistema de rotas
+require_once('../app/rotas.php');
+
+
