@@ -1,9 +1,12 @@
 <?php
 
 
+
+
+
 // Abrindo a sessão
 
-use App\Classes\Models\Database;
+use App\Classes\Rotas\Rotas;
 
 session_start();
 
@@ -14,6 +17,18 @@ require_once('../config.php');
 require_once('../vendor/autoload.php');
 
 // Carregando sistema de rotas
-require_once('../app/rotas.php');
+$rotas = [
+    'inicio' => 'main@index',
+    'loja' => 'main@loja',
+    'carrinho' => 'main@carrinho',
+    'novoCliente' => 'viewsCliente@novoCliente',
+    'loginCliente' => 'viewsCliente@loginCliente',
+    'minhaConta' => 'viewsCliente@minhaConta', 
+    'registrarCliente' => 'authCliente@registrarCliente',
+    'logoutCliente' => 'authCliente@logout',
+];
 
+$acao = 'inicio';
 
+$rota = new Rotas($rotas, $acao);
+$rota->roteamento();

@@ -75,7 +75,7 @@ class Database
     //====================================================================================================
     public function insert($sql, $parametros = null)
     {
-
+        $sql = trim($sql);
         // Verificando se é uma instrução INSERT
         if (!preg_match('/^INSERT/i', $sql)) {
             die('Base de Dados - Não é uma instrução INSERT.');
@@ -90,11 +90,10 @@ class Database
         // comunicando
         try {
 
+            $executar = $this->ligacao->prepare($sql);
             if (!empty($parametros)) {
-                $executar = $this->ligacao->prepare($sql);
                 $executar->execute($parametros);
             } else {
-                $executar = $this->ligacao->prepare($sql);
                 $executar->execute();
             }
             $this->ligacao->commit();

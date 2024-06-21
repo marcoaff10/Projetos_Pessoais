@@ -1,0 +1,19 @@
+/* tela de registro de clientes */
+
+h3.tituloRegistro {
+    font-size: 28px;
+    color: #1393e8;
+}
+
+button.bntSubmit {
+    font-weight: bold;
+    transition: .4s;
+    color: rgb(235, 238, 238);
+    background-image: -webkit-linear-gradient(95deg, #1393e8 20%, #64c7fd 60%);
+}
+
+button.bntSubmit:hover {
+    font-weight: bold;
+    color: rgb(181, 184, 184);
+    background-image: -webkit-linear-gradient(95deg, #107ec6 20%, #5eb6e5 60%);
+}

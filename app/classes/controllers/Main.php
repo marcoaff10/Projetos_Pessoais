@@ -2,22 +2,23 @@
 
 namespace App\Classes\Controllers;
 
-use App\Classes\Helpers\Functions;
+use App\Classes\Helpers\Store;
 
 class Main
 {
     //====================================================================================================
     public function index()
-    {;
+    {
 
         $dados = [
-            'titulo' => 'Este é um título',
-            'clientes' => ['Marco', 'Vitoria', 'Ana']
+            'titulo' => APP_NAME,
         ];
 
-        return Functions::layout([
+        return Store::layout([
             'layouts/html_header',
+            'layouts/header',
             'home',
+            'layouts/footer',
             'layouts/html_footer',
         ], $dados);
     }

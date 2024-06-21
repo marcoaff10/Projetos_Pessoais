@@ -1,0 +1,49 @@
+/* header do site */
+div.navegacao {
+    background-image: -webkit-linear-gradient(95deg, #64c7fd 20%, #1393e8 60%);
+
+}
+
+div.navegacao a.titulo {
+    text-decoration: none;
+    transition: .3s;
+    color: rgb(235, 238, 238);
+}
+
+div.navegacao a.titulo:hover {
+    color: rgb(181, 184, 184);
+}
+
+div.menuMobile a.dropMobile {
+    font-size: 24px;
+    transition: .5s;
+    color: rgb(235, 238, 238);
+}
+
+div.menuMobile a.dropMobile:hover {
+    font-size: 26px;
+    color: rgb(181, 184, 184);
+}
+
+a.linkInicioLoja {
+    text-decoration: none;
+    font-size: 20px;
+    transition: .5s;
+    color: rgb(235, 238, 238); 
+}
+
+a.linkInicioLoja:hover {
+    text-decoration: underline;
+    font-size: 21px;
+    transition: .5s;
+    color: rgb(181, 184, 184);
+}
+
+
+/* footer do site */
+div.rodape {
+    padding-top: 10px;
+    font-weight: bold;
+    background-image: -webkit-linear-gradient(95deg, #1393e8 20%, #64c7fd 60%);
+    color: rgb(235, 238, 238); 
+}
